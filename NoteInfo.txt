@@ -1,4 +1,4 @@
-Name: Võ Đức Khoa
+﻿Name: Võ Đức Khoa
 Phone: 0584295403
 Mail:khoa28101998@gmial.com
 
@@ -8,3 +8,6 @@ Mail: quy.120993@gmail.com
 
 Name: Nguyễn Quang Huy
 Phone: 0987654321
+
+Name : NGUYỄN VĂN LỄ
+phone. 123
