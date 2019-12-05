@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/BaiTap_C13.css">
+        <!--href: nhúng file css vào html-->
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--        Width of the screen in CSS pixel at a scale of 100% -->
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+        <meta name="author" content="Danh Pham">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript and jQuery book</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../dist/slicknav.css">
+        <script
+            src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <img src="../img/mick_thomson.jpg" width=auto height="100"
+                    alt="Image at header">
+            </div>
+            <div>
+                <h1>San Joaquin Valley Town Hall</h1>
+                <h4>Celebrating out 75<sup>th</sup> Year</h4>
+            </div>
+        </header>
+        <nav>
+            <ul id="menu">
+                <li class="dropdown"><a href="BaiTapS1.html">Home</a></li>
+                <li class="dropdown"><a href="BaiTapS2.html">Speakers</a></li>
+                <li class="dropdown"><a href="BaiTapS3.html">Luncheons</a></li>
+                <li class="dropdown"><a href="BaiTapS4.html">Tickets</a></li>
+                <li class="dropdown"><a class="dropbtn">AboutUs</a>
+                    <ul class="spinner">
+                        <li><a href="https://youtube.com">Our History</a></li>
+                        <li><a href="https://youtube.com">Board of Directors</a></li>
+                        <li><a href="https://youtube.com">Past Speakers</a></li>
+                        <li><a href="https://youtube.com">Contact Information</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <article id="block1">
+                <h2>Guest speakers</h2>
+                <div id=profile1>
+                    <p><b>October</b></p>
+                    <p><b><a href="https://www.facebook.com/danh.pham.144">Jeffey
+                                Toobin</a></b></p>
+                    <img src="../img/3.jpg" width="80" height="100"
+                        alt="Profile1">
+                </div>
+                <div id=profile2>
+                    <p><b>November</b></p>
+                    <p><b><a href="https://www.24h.com.vn">Andrew Ross Sorkin</a></b></p>
+                    <img src="../img/4.jpeg" width="80" height="100"
+                        alt="Profile2">
+                </div>
+                <div id=profile3>
+                    <p><b>January</b></p>
+                    <p><b><a href="https://youtube.com">Amny Chua</a></b></p>
+                    <img src="../img/5.jpg" width="80" height="100"
+                        alt="Profile3">
+                </div>
+                <div id=profile4>
+                    <p><b>February</b></p>
+                    <p><b><a href="https://youtube.com">Scott Sampson</a></b></p>
+                    <img src="../img/5.jpg" width="80" height="100"
+                        alt="Profile4">
+                </div>
+            </article>
+            <section>
+                <h2>Oder Form</h2>
+                <div id="Info">
+                    <form class="field">
+                        <fieldset>
+                            <legend><b>Member Information:</b></legend>
+                            <label for="email">Email: </label>
+                            <input type="text" id="email" name="email" required><br>
+                            <label for="fname">First Name: </label>
+                            <input type="text" id="fname" name="fname" required><br>
+                            <label for="lname">Last Name: </label>
+                            <input type="text" id="lname" name="lname" required><br>
+                            <label for="address">Address: </label>
+                            <input type="text" id="address" name="address" required><br>
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="city" required><br>
+                            <label for="state">State: </label>
+                            <input type="text" id="state" name="state" placeholder="2-character code" pattern="\d{2}" required><br>
+                            <label for="zip">ZIP code: </label>
+                            <input type="text" id="zip" name="zip" placeholder="5 or 9 digits" pattern="\d{5}([\-]\d{4})?" required><br>
+                            <label for="phone">Phone Number: </label>
+                            <input type="tel" name="phone" id="phone"
+                                pattern="[0-9]{3}[\-][0-9]{3}[\-][0-9]{4}" placeholder="999-999-9999" required>
+                        </fieldset>
+                        <fieldset>
+                            <legend><b>Ordering Information:</b></legend>
+                            <label for="odertype" >Oder Type: </label>
+                            <select id="odertype" name="odertype">
+                                <option value="member">Member Package</option>
+                                <option value="guest">Guest Package</option>
+                            </select><br>
+                            <label for="numticket">Number of Tikets: </label>
+                            <input type="number" id="numticket"
+                                name="numticket" placeholder="Number of single tickets" ><br>
+                        </fieldset id="methor_pay>
+                        <fieldset id="method">
+                            <legend><b>Payment Method:</b></legend>
+                            <input type="radio" id="radio1" name="methor" value="bill"> 
+                            <label for="radio1">Bill Me</label>
+                            <input type="radio" id="radio2" name="methor" value="credit">
+                            <label for="radio2">Credit Card</label>
+                        </fieldset>
+                        <fieldset">
+                            <legend><b>Credit Card Information:</b></legend>
+                            <label for="methor">Card Type</label>
+                            <select id="methor" name="methor">
+                                <option value="visa">Visa</option>
+                                <option value="installment">Installment</option>
+                                <option value="voucher">Voucher</option>
+                            </select><br>
+                            <label for="cardnumber">Card Number: </label>
+                            <input type="text" name="cardnumber"
+                                id="cardnumber" pattern="^\d{4}-\d{4}-\d{4}-\d{4}$" 
+                                placeholder="16 digits" required><br>
+                            <label for="expiration">Oder Type: </label>
+                            <input type="month" id="month">
+                        </fieldset>
+                        <fieldset id="button">
+                            <legend><b>Submit Your Order:</b></legend>
+                            <input type="submit" id="submit" value="Submit">
+                            <input type="reset" id="reset" value="Reset Field">
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; Copyright 2018 San Joaquin Valley Town Hall, Fresno, CA
+                93755</p>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+        <script
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="../dist/jquery.slicknav.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function () {
+            $('#menu').slicknav();
+        });
+        </script>
+    </body>
+</html>
