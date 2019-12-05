@@ -25,3 +25,8 @@ Email: moneyduytran@gmail.com
 Name: Phạm Công Danh
 Phone : 0935729917
 Email: danhpham411@gmail.com
+
+-----------------------------------------------------------------------------------
+Name: Nguyễn Văn Hải
+Phone: 0973741903
+Email: zzvanhai81@gmail.com
