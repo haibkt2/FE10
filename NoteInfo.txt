@@ -6,6 +6,18 @@ Name: Phan Vĩnh Quý
 Phone: 0367 324 657
 Mail: quy.120993@gmail.com
 
+<<<<<<< HEAD
 Name: Trần Duy Tiền
 phone: 0983401945
 Mail: moneyduytran@gmail.com
+=======
+Name: Nguyễn Quang Huy
+Phone: 0987654321
+
+Name : NGUYỄN VĂN LỄ
+phone. 123
+
+Name: Trần Duy Tiền
+Phone : 0983401945
+Email: moneyduytran@gmail.com
+>>>>>>> f1a8650c558eea7609a29a4ab6f13af36c53d744
