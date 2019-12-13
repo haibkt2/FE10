@@ -14,11 +14,10 @@
     <body>
         <script>
             var value_ = prompt("Insert value:");
-            do{
+            while(isNaN(value_)){
                 alert("Please insert a number!");
                 value_= prompt("Insert a number: ");
             }
-            while(isNaN(value_));
             alert("value int:" +parseInt(value_));
             alert("value float:" +parseFloat(value_));
         </script>
