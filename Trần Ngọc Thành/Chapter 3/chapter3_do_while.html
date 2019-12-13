@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>First Js</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="#">
+    </head>
+    <body>
+        <script>
+            var value_ = prompt("Insert value:");
+            do{
+                alert("Please insert a number!");
+                value_= prompt("Insert a number: ");
+            }
+            while(isNaN(value_));
+            alert("value int:" +parseInt(value_));
+            alert("value float:" +parseFloat(value_));
+        </script>
+    </body>
+</html>
