@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 3, b = 5;
+        function UCLN ( a, b){
+            while( a != b){
+                if( a > b ) a -= b;
+                else b -= a;
+            }
+            return a; 
+        }
+        document.write("Sum = BCLN(a,b) + 1000 is :"+ (a*b/UCLN(a,b) + 1000));
+        </script>
+</body>
+</html>
