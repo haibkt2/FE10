@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Write a JavaScript program that accept three integers and display the larger</title>
+</head>
+<body>
+<script>
+var numb1, numb2, numb3, xam;
+    do {
+    numb1 = window.prompt("Enter the first integer number", "0");
+    numb2 = window.prompt("Enter the second integer number", "0");
+    numb3 = window.prompt("Enter the third integer number", "0");
+    }
+    while (isNaN(numb1) || isNaN(numb2) || isNaN(numb3));
+    xam = numb1;
+    if(numb2 > xam) xam = numb2;
+    if(numb3 > xam) xam = numb3;
+    console.log(xam);
+    </script>
+</body>
+</html>
