@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Chapter3 Ex 1</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="#">
+    </head>
+    <body>
+        <script>
+            var a, b, c;
+            do{
+                a = prompt("Enter first number: ", 0);
+                b = prompt("Enter second number: ", 0);
+                c = prompt("Enter third number: ", 0);
+            }
+            while(isNaN(a,b,c));
+            var max = a;
+            if(b>max){
+                max = b;
+            }
+            if(c>max){
+                max = c;
+            }
+            document.write(max);
+        </script>
+    </body>
+</html>
