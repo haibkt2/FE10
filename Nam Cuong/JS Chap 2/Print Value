@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Print Int and Float Value</title>
+</head>
+
+<body>
+    <script>
+        var value = prompt("Insert value: ");
+        while (isNaN(value)) {
+
+            alert("Please insert value: ");
+            value = prompt("Insert value: ");
+        }
+        alert("value int = " + parseInt(value));
+        alert("Value float = " + parseFloat(value));
+    </script>
+</body>
+
+</html>
