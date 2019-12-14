@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Input three integers and display the larger.</title>
+</head>
+
+<body>
+    <script>
+        var a, b, c, max;
+        do {
+            a = prompt("Input ", 0);
+            b = prompt("Input ", 0);
+            c = prompt("Input ", 0);
+        }
+        while (isNaN(a) || isNaN(b) || isNaN(c));
+        max = a;
+        if (b > max) max = b;
+        if (c > max) max = c;
+        document.write(max);
+    </script>
+</body>
+
+</html>
