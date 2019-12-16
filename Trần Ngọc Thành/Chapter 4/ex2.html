@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ex 2</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="#">
+    </head>
+    <body>
+        <script>
+            var arr1 = [3,8,7,6,5,-4,-3,2,1];
+            for(let i = 0; i < arr1.length - 1 ; i++)
+            {
+                for(let j = i+1; j < arr1.length; j++)
+                {
+                    var k;
+                    if(arr1[i] > arr1[j])
+                    {
+                        k = arr1[i];
+                        arr1[i] = arr1[j];
+                        arr1[j] = k;
+                    }
+                }
+            }
+            var arr1String = "";
+            for(let i = 0; i < arr1.length; i++)
+            {
+                arr1String += arr1[i] + " ";
+            }
+            document.write(arr1String);
+        </script>
+    </body>
+</html>
