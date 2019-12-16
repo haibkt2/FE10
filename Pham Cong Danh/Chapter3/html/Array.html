@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+        <meta name="author" content="Danh Pham">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript and jQuery book</title>
+    </head>
+    <body>
+        <script>
+            // Bai 1
+            var myColor = ["Red", "Green", "White", "Black"];
+            var output = "";
+            for (let i = 0; i < myColor.length; i++) {
+                output += myColor[i] + ", ";
+            }
+            document.write("Bai 1: Output string : " + output + "</br>");
+
+            // Bai2:
+            var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+            for (let j = 0; j < arr1.length; j++) {
+                var x = arr1[j];
+                for(let k = j+1; k < arr1.length; k++) {
+                    if(x>arr1[k]){
+                        x = arr1[k];
+                        arr1[k] = arr1[j];
+                        arr1[j] = x;
+                    }
+                }
+            }
+            document.write("Bai 2: Output sort : " + arr1.toString()  + "</br>");
+
+            // Bai 3:
+            var arr=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+            var y = 0;
+            for (let i = 0; i<arr.length; i++) {
+                count = 1;
+                for (let j = i+1; j<arr.length; j++) {
+                    if(arr[i]==arr[j]){
+                        count++;
+                    }
+                }
+                if(count>y) y = count;
+            }
+            document.write("Bai 3: Output count : " + y + "</br>");
+
+            // Bai 4:
+            // var array1 = [1,0,2,3,4];
+            // var array2 = [3,5,6,7,8,13];
+            // for (let i = 0; i<arr.length; i++) {
+            //     ara
+            // }
+        </script>
+    </body>
+</html>

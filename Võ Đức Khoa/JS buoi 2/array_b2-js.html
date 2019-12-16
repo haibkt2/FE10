@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    // method 
+    var a = [3,8,7,6,5,-4,-3,2,1];
+    var swap = function( x,  y){
+        let tmp = x;
+        x = y;
+        y = tmp;
+    }
+    var display = function(arr){
+        for(let i = 0; i<arr.length ;i++){
+            console.log(" "+arr[i]);
+        }
+    }
+    var select_sort = function(){
+        for(let i = 0; i<a.length-1; i++)
+         {
+             let vtm = i;
+            for(let j = i+1; j<a.length; j++){
+                if(a[i] > a[j]){
+                    vtm = j;
+                    let tmp = a[vtm];
+                    a[vtm] = a[i];
+                    a[i] = tmp;
+                }
+            }
+         }
+         display(a);
+    }
+    var bubble_sort = function(){
+    let kt ;
+    for( let i = 0; i< a.length - 1; i++){
+        for( let j = 0; j< a.length-1-i; j++){
+              if(a[j] > a[j+1]){
+                  swap(a[j],a[j+1]);
+                  kt = 1;
+              }
+        }
+        if(kt == 0) break;
+    }
+    display(a);
+    }
+    // main
+    console.log("Select  sort:");
+    select_sort();
+    console.log("Bubble sort:");
+    bubble_sort();
+    </script>
+</body>
+</html>

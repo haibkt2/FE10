@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+           var tam=[];
+           var mang2=[-3,8,7,6,5,-4,3,2,1];
+           var min=mang2[0];
+           var pos;
+           var max=mang2[0];
+              for (i=0; i<mang2.length; i++)
+                 {
+                    if (max<mang2[i]) max=mang2[i];
+                  }
+                  for (var i=0;i<mang2.length;i++)
+                   {
+                      for (var j=0;j<mang2.length;j++)
+                        {
+                              if (mang2[j]!="x")
+                           {
+                                 if (min>mang2[j]) 
+                              {
+                                  min=mang2[j];
+                                  pos=j;
+                               }
+                           }
+                        }
+                          tam[i]=min;
+                          mang2[pos]="x";
+                          min=max;
+                    }
+                   console.log(tam);
+          </script>
+    </body>
+</html>

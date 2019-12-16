@@ -8,11 +8,19 @@
         <title>Javascript and jQuery book</title>
     </head>
     <body>
-        <script>
+        <!-- <script>
             var value = prompt("Input value: ", );
             while (isNaN(value)){
-            	value = prompt("Please input number: ",);
+                value = prompt("Please input number: ",);
             }
+            alert("value int :" + parseInt(value));
+            alert("value float : " + parseFloat(value));
+        </script> -->
+        <script>
+            var value;
+            do{
+                value = prompt("Please input number: ",);
+            }while(isNaN(value))
             alert("value int :" + parseInt(value));
             alert("value float : " + parseFloat(value));
         </script>
