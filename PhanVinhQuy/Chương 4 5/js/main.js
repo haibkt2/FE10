@@ -2,7 +2,6 @@
 window.onload = () => {
     var $ = (id) => {
         return document.getElementById(id);
-
     }
     var checkValue = () => {
         if (isNaN($("amount").value) || isNaN($("rate").value) || isNaN($("year").value)) {
@@ -12,20 +11,16 @@ window.onload = () => {
         else return true;
     }
     $("cal").onclick = () => {
-        var amount = parseFloat($("amount").value);
-        var rate = parseFloat($("rate").value);
-        var year = parseFloat($("year").value);
-        var value = 0;
         if (checkValue()) {
+            var amount = parseFloat($("amount").value);
+            var rate = parseFloat($("rate").value);
+            var year = parseFloat($("year").value);
             if(year != 0) {
-                value = amount + amount * rate;
-                for (let i = 2; i <= year; i++) {
-                    value += value * rate;
+                for (let i = 1; i <= year; i++) {
+                    amount += amount * rate;
                 }
             }
         }
-        $("value").value = value;
+        $("value").value = amount;
     };
-
-
 }
