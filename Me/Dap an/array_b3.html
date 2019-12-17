@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = [1, 4, 3, 7, 3];
+        var a_new = [];
+        for (let i = 0; i < a.length - 1; i++)
+            for (let j = i + 1; j < a.length; j++) {
+                if (a[i] > a[j]) {
+                    let tmp = a[i];
+                    a[i] = a[j];
+                    a[j] = tmp;
+                }
+            }
+        document.write(a);
+    </script>
+</body>
+
+</html>
