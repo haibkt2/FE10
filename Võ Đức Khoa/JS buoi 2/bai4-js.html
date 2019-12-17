@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = [2, 1, 2, 1];
+        var b = [2, 1, 2, 1, 3, 5];
+        var c = [];
+        for (var i = 0; i < a.length && i < b.length; i++) {
+            c[i] = a[i] + b[i];
+        }
+        var j = 0;
+        if (i == a.length) {
+            for (j = i; j < b.length; j++)
+                c[j] = b[j];
+        }
+        if (i == b.length) {
+            for (j = i; j < a.length; j++)
+                c[j] = a[j];
+        }
+        document.write(c);
+    </script>
+</body>
+
+</html>
