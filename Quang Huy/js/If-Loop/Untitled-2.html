@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a,b,c,max_;
+        do{
+            a = prompt("Input a",);        
+            b = prompt("Input b",);      
+            c = prompt("Input c",);    
+        } while(isNaN(a) || isNaN(b) || isNaN(c));       
+        max_ = a;
+        if(b> max_){
+            max_ = b;
+        } if (c > max_){ 
+            max_ = c;
+        }
+        document.write(max_);
+    </script>
+    
+</body>
+</html>
