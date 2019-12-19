@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+form {
+    margin-top: 100px;
+}
+form label {
+    float: left;
+    width: 150px;
+}
+form input {
+    margin-bottom: 8px;
+    padding: 5px;
+}
+form button {
+    margin-left: 150px;
+    padding: 5px;
+}
