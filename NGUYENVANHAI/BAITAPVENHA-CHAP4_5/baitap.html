@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài Tập</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="value_Calculator">
+        <h1>Future Value Calculator</h1>
+        <form action="#">
+            <label>Investment Amount: </label>
+            <input type="tel" id="amount"/><br>
+            <label>Annual Interest rate: </label>
+            <input type="tel" id="rate"/><br>
+            <label>Number of Years</label>
+            <input type="text" id="year"/><br>
+            <label>Future Value</label>
+            <input type="text" id="total" disabled/><br>
+            <input type="button" id="bt" value="Calculator"/>
+        </form>
+    </div>
+
+    <script>
+        window.onload = function(){
+            var $ = function(id){
+                return document.getElementById(id);
+            }
+
+            $("bt").onclick = function(){
+                var amount = $("amount").value.trim();
+                var rate = $("rate").value.trim();
+                var year = $("year").value.trim();
+
+                if(amount == '' || rate == '' || year == ''
+                    || isNaN(amount) || isNaN(rate) || isNaN(year)
+                    || amount < 0 || rate < 0 || year < 0){
+                        
+                    alert("Input wrong, plse input.....");
+                }
+                else{
+                    amount = parseFloat(amount).toFixed(2);
+                    for(let i = 1; i <= year; i++){
+                        amount = parseFloat(amount) + parseFloat(amount*rate);
+                    }
+                    $("total").value = amount;
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>
