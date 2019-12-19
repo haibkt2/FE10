@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="Calculate">
+	<link rel="stylesheet" href="C:\Users\Administrator.M521RCP8U2864WM\Desktop\html +css bt\FE10\NguyenVinh\BT\BT_C3\css\calculator.css
+	">
+	<title>Future Value Calculator</title>
+</head>
+<body>
+	<main>
+		<fieldset>
+		<form action="#" method="post">
+		<h1>Future Value Calculator</h1>
+		<label for="amount">Investment Amount</label>
+		<input type="text" name="iv_amount" id="iv_amount" required><br>
+		<label for="rate">Annual Interest Rate</label>
+		<input type="text" name="rate" id="rate" required><br>
+		<label for="years">Number of Years</label>
+		<input type="text" name="years" id="years" required><br>
+		<label for="value">Future Value</label>
+		<input type="text" name="value" id="result" ><br>
+		<label>&nbsp;</label>
+		<input type="button" onclick="getValue()" id="calculate" value="Calculate">
+		</form>
+		</fieldset>
+	</main>
+	<script type="text/javascript">
+		var $ = function(id){
+			return document.getElementById(id).value;
+		}
+		function getValue(){
+		var iv_amount = parseInt($("iv_amount"));
+		var rate = parseFloat($("rate"));
+		var year = parseInt($("years"));
+
+		
+		var result = calculate(iv_amount,rate,year)
+		document.getElementById("result").value = result;
+		}
+
+		function calculate(iv_amount,rate,year){
+			var first_year =  iv_amount  + iv_amount * rate
+			var second_year = iv_amount  + iv_amount * rate + (iv_amount  + iv_amount*rate) * rate
+			return (first_year) + (second_year* year)
+			
+		}
+		
+	</script>
+</body>
+</html>
