@@ -29,6 +29,8 @@ window.onload = () => {
             else {
                 $("percent").value = 10;
                 $("amount").value = 0;
+                $("amount").setAttribute("disabled","");
+                $("note").innerHTML = "";
             }
         }
         else if (type.value == 200) {
