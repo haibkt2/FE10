@@ -7,28 +7,23 @@ var validateValue = function(value){
 			|| value.trim() == '') ? false : true;
 		return check;
 }
-$("type").onchange = function(){
-	var customer = $("type").value;
-	var subtotal = $("subtotal").value;
-	// validate subtotal
+$("customer").onchange = function(){
+	var customer = $("customer").value;
 	var check = validateValue(subtotal);
-	if(check && customer == 'other' 
-		&& parseFloat(subtotal).toFixed(2) < 1000) {
-			$("amount").disabled = true;
-	} else {
-			$("amount").disabled = false;
-	}
+	$("amount").disabled = customer == 'other' ? false : true;
 }
 $("cal").onclick = function(){
-	var customer = $("type").value;
-	var subtotal = parseFloat($("subtotal").value).toFixed(2);
+	var customer = $("customer").value;
+	var subtotal = $("subtotal").value;
 	// validate subtotal
 	var check = validateValue(subtotal);
 	var percent = 0, amount = 0;
 	if(check) {
+		subtotal = parseFloat(subtotal).toFixed(2);
 		// case subtotal < 1000
-		if(parseFloat(subtotal).toFixed(2) < 10000) {
-			percent = '10.00';
+		if(subtotal < 10000) {
+			percent = 0.1;
+			$("amount").disabled = true;
 		} else { // case subtotal >= 1000
 			// case customer : Lay
 			if(customer == '200'){
@@ -41,24 +36,24 @@ $("cal").onclick = function(){
 				percent = subtotal < 15000 ? 0.15 : 0.2;
 			} // case customer : other
 			else {
-				var amount_input = $("amount");
+				var amount_input = $("amount").value;
 				// validate amount
 				check = validateValue(amount_input);
 				if(check && amount_input < 500) {
 					percent = 0.15;
-					amount = parseFloat("amount");
+					amount = parseFloat(amount_input).toFixed(2);
 				}
 			}
 		}
 		// caculate total
 		// display amount, percent, total
-		if(check) {
-			total = subtotal * percent - amount;
-			$("total").value = total;
-			$("percent").value = percent;
-			$("amount").value = amount;
-		} else {
-			alert("Error");	
-		}
+	}
+	if(check) {
+		total = subtotal * percent - amount;
+		$("total").value = parseFloat(total.toFixed(2));
+		$("percent").value = percent*100;
+		$("amount").value = amount;
+	} else {
+		alert("Error");	
 	}
 }
