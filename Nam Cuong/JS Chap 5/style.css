@@ -1,0 +1,21 @@
+body{
+    margin: 10px;
+}
+form {
+    margin-top: 10px;
+   
+}
+ label {
+    float: center;
+    width: 150px;
+}
+form input {
+    margin-bottom: 8px;
+    padding: 5px;
+    
+}
+
+form button {
+    margin-left: 200px;
+    padding: 5px;
+}

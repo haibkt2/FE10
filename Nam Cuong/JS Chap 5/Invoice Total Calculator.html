@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invoice Total Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div>
+    <h1>Invoice Total Calculator</h1>
+    <p>Enter the two values that follow and click "Calculate".</p>
+</div>
+    <form action="#">
+        <label for="cstype">Customer Type</label>
+        <select id="cstype">
+            <option value="1">Honored Citizen</option>
+            <option value="2">Lay</option>
+            <option value="3">Other</option>
+        </select></br>
+        <label for="subtotal">Invoice Subtotal</label>
+        <input type="text" id="subtotal"></br>
+
+        <label for="percent">Discount Percent</label>
+        <input type="text" id="percent" disabled></br>
+
+        <label for="amount">Discount Amount</label>
+        <input type="text" id="amount" disabled></br>
+
+        <label for="total">Invoice Total</label>
+        <input type="text" id="total" disabled></br>
+
+        <button type="submit" id="bt">Calculate</button>
+
+    </form>
+
+
+
+</body>
+
+</html>
