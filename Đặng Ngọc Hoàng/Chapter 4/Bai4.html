@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var array1 = [1, 0, 2, 3, 4];
+    var array2 = [3, 5, 6, 7, 8, 13];
+    var arr = [];
+    var length = 0;
+    if(array1.length > array2.length) length = array1.length;
+    for(let i = 0; i < length, i++) {
+        if(array1[i] == undefined) arr[i] = array2[i];
+        else if(array2[i] == undefined) arr[i] = array1[i];
+        else arr[i] = array2[i]+array1[i];
+    }
+    </script>
+</body>
+</html>
