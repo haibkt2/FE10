@@ -35,11 +35,13 @@
             var $ = function(id){
                 return document.getElementById(id);
             }
-            function myFunction() {
-                var type = $("type").value;
-                if(type == 'other'){
-                    document.getElementById("amount").removeAttribute("disabled");
+            $("type").onchange = function(){
+                if($("type").value = 'other'){
+                    $('amount').disabled = false;
                     $("percent").value = 15;
+                }
+                else{
+                    $('amount').disabled = true;
                 }
             }
             $("bt").onclick = function(){
@@ -76,16 +78,21 @@
                                         $("amount").value = 300;
                                         $("percent").value = 15;
                                     }
+                                    else{
+                                        if(type == 'other'){
+                                            $("percent").value = 15;
+                                            if(amount < 0 || amount >= 500){
+                                                alert("Please input positive number < 500 into Discount Amount field!!...");
+                                            }
+                                            else{
+                                                total = parseFloat(invoice)*parseFloat(percent)-parseFloat(amount);
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
-                }
-                if(amount < 0 || amount >= 500){
-                    alert("Please input positive number < 500 into Discount Amount field!!...");
-                }
-                else{
-                    total = parseFloat(invoice)*parseFloat(percent)-parseFloat(amount);
                 }
                 $("total").value = total;
             }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var c_max = 0;
+    var vl_max = "";
+    var arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+    for(let i = 0; i < arr.length; i++) {
+        var c = 1;
+        for(let j = i+1; j < arr.length; j++) {
+            if(arr[i] == arr[j]) c++;
+        }
+        if(c >= c_max) {
+            c_max = c;
+            vl_max = arr[i];
+        }
+    }
+    </script>
+</body>
+</html>
