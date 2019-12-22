@@ -1,6 +1,7 @@
 var $ = function(id) {
     return document.getElementById(id);
 }
+
 var handl = function() {
     var sel  = $('sel').value;
     if( $('sub').value < 10000 ){
@@ -40,6 +41,10 @@ var handl = function() {
 var chon = function(){
     if($('sel').value == '3'){
         $('amount').disabled = false;
+        var amount = $('amount').value;
+        if( isNaN(amount) || amount == '' ||amount < 500)
+        alert('Input wrong, please input agian....');
+      
     }
     else{
         $('amount').disabled = true;
