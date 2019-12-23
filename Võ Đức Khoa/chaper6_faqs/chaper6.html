@@ -14,17 +14,15 @@
         <form action="#" method="GET">
             <h1> Invoice Total Calculator</h1>
             <p>Enter the two values that follow and click "Calculator"</p>
-            <label for="sel">Customer Type:</label>
-            <select name="sel" id="sel" >
-                <option value="default"> Chon</option>
-                <option value="1" > Lay</option>
-                <option value="2" >Honer</option>
-                <option value="3">Other</option>
+            <label for="customer">Customer Type:</label>
+            <select name="customer" id="customer" >
+                <option value="lay" > Lay</option>
+                <option value="honer" >Honer</option>
+                <option value="other">Other</option>
             </select> <br>
-            <label for="sub">Invoice Subotal:</label>
-            <input type="text" id="sub">
-            <p>--------------------------------------------------
-                ---------------------------
+            <label for="subtotal">Invoice Subotal:</label>
+            <input type="text" id="subtotal">
+            <p>-----------------------------------------------------------------------------
             </p>
             <label for="percent">Discount Percent:</label>
             <input type="text" id="percent" disabled>
@@ -33,45 +31,11 @@
             <input type="text" id="amount" disabled><br>
             <label for="total">Invoice Total:</label>
             <input type="text" id="total" disabled ><br>
-            <input type="button" name="cal" id="cal" value="Calculator">
+            <input type="button" name="calculator" id="calculator" value="Calculator">
         </form>
     </main>
 </body>
 <script src="subtotal.js">
 </script>
-<style>
-*{
-    margin: 0;
-    padding: 0;
-}
-h1{
-    color: blue;
-    margin-left: 40px;
-    margin-top: 10px;
-}
-p{
-    margin-left: 40px;
-    
-    padding-bottom: 2px;
-}
-select{
-    width: 130px;
-    margin-left: 100px;
-}
-form{
-width: 500px;
-height: 300px;
-border: 2px solid blue;
-margin-left: 350px;
-}
-label{
-    margin-left: 40px;
-    width: 300px;
-}
-input{
-    width: 130px;
-    margin-top: 5px;
-    margin-left: 100px;
-}
-</style>
+
 </html>
