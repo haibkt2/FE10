@@ -1,47 +1,53 @@
 var $ = function(id) {
     return document.getElementById(id);
 }
-var validateValue = function(value){
-     var check = (isNaN(value) || value.trim() == '' || value < 0) ? false : true;
-     return check; 
+var handl = function() {
+    var sel  = $('sel').value;
+    if( $('sub').value < 10000 ){
+        $('amount').value = 0;
+        $('percent').value = 10;
+        $('total').value = $('sub').value*0.1 - $('amount').value;
+    }
+    else if(sel == '1'){
+        if($('sub').value < 15000){
+            $('amount').value = 200;
+            $('percent').value = 10;
+            $('total').value = $('sub').value*0.1 - $('amount').value;  
+        }
+        else{
+            $('amount').value = 200;
+            $('percent').value = 15;
+            $('total').value = $('sub').value*0.15 - $('amount').value;
+        }
+    }
+    else if(sel == '2'){
+        if($('sub').value < 15000){
+            $('amount').value = 300;
+            $('percent').value = 15;
+            $('total').value = $('sub').value*0.15 - $('amount').value; 
+        }
+        else{
+            $('amount').value = 300;
+            $('percent').value = 20;
+            $('total').value= $('sub').value*0.2 - $('amount').value; 
+        }
+    }
+    else{
+        $('percent').value = 50;
+        $('total').value = $('sub').value*0.5 - $('amount').value;
+    }
 }
-
-window.onload = function(){
-    $("customer").onchange = function(){
-        $("amount").disabled = $("customer").value == "other" ? false : true;
+var chon = function(){
+    if($('sel').value == '3'){
+        $('amount').disabled = false;
     }
-    var calculator = function(){
-        $("total").value = parseFloat(subtotal*($("percent").value/100) - $("amount").value).toFixed(4);
+    else{
+        $('amount').disabled = true;
     }
-    $("calculator").onclick = function(){
-          var subtotal = parseFloat($("subtotal").value).toFixed(2);
-          var customer = $("customer").value; 
-          var check = validateValue(subtotal);
-          if(check){
-            if(subtotal < 1000) {
-                $("amount").value = 0;
-                $("percent").value = 10;
-            }
-            else if(customer == "lay"){
-                $("amount").value = 200;
-                $("percent").value = subtotal < 1000 ? 10 : 15; 
-                }
-                 else if(customer == "honer"){
-                    $("amount").value = 300;
-                    $("percent").value  = subtotal < 1000 ? 15 : 20;  
-    
-                    }
-                     else{
-                        var checkamount = validateValue($("amount").value);
-                       if(checkamount && $("amount").value < 500){
-                        $("percent").value = 15;
-                       } 
-                       else alert("error");
-                     }
-    $("total").value = parseFloat(subtotal*($("percent").value/100) - $("amount").value).toFixed(4);          
-          }
-          else alert("error");
-    }
-    
-    
+}
+window.onload = function() {
+    var calculator = $('cal');
+    calculator.onclick = handl;
+    var sel = $('sel');
+    sel.onchange = chon;
 }
