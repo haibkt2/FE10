@@ -8,12 +8,32 @@
     <link rel="stylesheet" href="style_clock.css">
 </head>
 <body >
-    <form action="#" method="GET">
-        <input type="text" id="display" disabled> <br>
-    <span id="clock"> </span> <br>
-    <input type="text" id="input" placeholder="Input time"> <br>
-    <input type="button" value="Set Time" name="set"id="set"> <br>
-    </form>
+    <audio id="my_audio">
+        <source src="cotham.mp3" type="audio/mpeg">
+    </audio>
+    <div id="main-container">
+        <h2 id="clock"></h2>
+    </div>
+    <div>
+        <h3>Set alarm time</h3>
+        <label>
+            <div><select name="alarmhrs" id="alarmhrs"></select></div>
+        </label>
+        <label>
+            <div><select name="alarmmins" id="alarmmins"></select></div>
+        </label>
+        <label>
+            <div><select name="alarmsecs" id="alarmsecs"></select></div>
+        </label>
+        <label>
+            <div><select name="ampm" id="ampm">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+            </select></div>
+        </label>
+        <div id="buttonHolder"><button id="setButton" onClick='set_alarm()'>Set Alarm</button></div>
+        <div ><button id="clearButton" onClick='clear_alarm()'>Clear Alarm</button></div>
+    </div>
 </body>
 <script src="handle.js"></script>
 </html>
