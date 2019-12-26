@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+body div {
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .5);
+    padding: 1rem;
+}
+body div h1 {
+    margin: 1rem 0;
+}
+body div>p {
+    padding: 0.5rem 0;
+}
+body div label {
+    float: left;
+    width: 150px;
+    margin-top: 8px;
+}
+body div input,select,button {
+    width: 150px;
+    padding: 4px 0;
+    margin: 4px 0;
+}
+body button {
+    margin-left: 150px;
+}

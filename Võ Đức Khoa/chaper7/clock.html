@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style_clock.css">
+</head>
+<body >
+    <audio id="my_audio">
+        <source src="cotham.mp3" type="audio/mpeg">
+    </audio>
+    <div id="main-container">
+        <h2 id="clock"></h2>
+    </div>
+    <div>
+        <h3>Set alarm time</h3>
+        <label>
+            <div><select name="alarmhrs" id="alarmhrs"></select></div>
+        </label>
+        <label>
+            <div><select name="alarmmins" id="alarmmins"></select></div>
+        </label>
+        <label>
+            <div><select name="alarmsecs" id="alarmsecs"></select></div>
+        </label>
+        <label>
+            <div><select name="ampm" id="ampm">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+            </select></div>
+        </label>
+        <div id="buttonHolder"><button id="setButton" onClick='set_alarm()'>Set Alarm</button></div>
+        <div ><button id="clearButton" onClick='clear_alarm()'>Clear Alarm</button></div>
+    </div>
+</body>
+<script src="handle.js"></script>
+</html>
