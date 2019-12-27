@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Clock</title>
+</head>
+
+<body>
+    <audio id="my_audio">	
+        <source src="nhac.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="content">
+        <h3 id="show_time"></h3>
+        <p id="show_mess"></p>
+        <form action="#">
+            <button type="button" id="turn_off">Turn off</button><br>
+            <input type="text" name="message_" id="message_" placeholder="Input your message"><br>
+            <input type="time" name="time" id="time"><br>
+            <button type="button" id="set_time">Set time</button>
+        </form>
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>
