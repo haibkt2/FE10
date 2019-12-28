@@ -55,10 +55,20 @@ function deleteTask() {
     // get tasks localstorage: type array
     var tasks = getTasks();
     // get index of task
-    var index = toogle_id.split("_")[1];
+    // ex:toogle_id = task_1 => [task,1]
+    var toogle_arr = toogle_id.split("_");
+    var index = toogle_arr[1];
+    /*var index = toogle_id.split("_")[1]; */
     // remove task
     tasks.splice(index, 1);
-    console.log(tasks);
+    
     localStorage.setItem("my_task", tasks.join(":"));
     showTask();
 }
+$("clear").onclick = function(){
+    localStorage.clear();
+}
+
+
+
+
