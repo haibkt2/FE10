@@ -1,34 +1,43 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
 }
-h1{
+
+h1 {
     color: blue;
-    margin-left: 40px;
-    margin-top: 10px;
 }
-p{
-    margin-left: 40px;
-    
-    padding-bottom: 2px;
+
+.style {
+    margin: auto;
+    width: 450px;
+    font-size: 16px;
+    background-color: #eeeeee;
+    border: 5px solid #eeeeee;
+    padding-left: 60px;
 }
-select{
-    width: 130px;
-    margin-left: 100px;
+
+.style label,
+input,
+section {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 15px;
 }
-form{
-width: 500px;
-height: 300px;
-border: 2px solid blue;
-margin-left: 350px;
+
+.style>label {
+    float: left;
+    width: 200px;
 }
-label{
-    margin-left: 40px;
-    width: 300px;
+
+.style>input {
+    margin-top: 3px;
 }
-input{
-    width: 130px;
+
+.style>select {
+    width: 163px;
+    font-size: 16px;
+}
+
+#calculator {
+    margin-left: 200px;
     margin-top: 5px;
-    margin-left: 100px;
 }
