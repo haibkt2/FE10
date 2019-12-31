@@ -22,4 +22,4 @@ function execute(img, srcSecond, altSecond) {
 }
 // when init page,
 // invoke method execute
-execute();
+execute($("img"), "src_new_img", "alt_new_img");
