@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator_</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main id="center">
+        <form action="#" class="style">
+            <h1>Invoice Total Calculator</h1>
+            <p>Enter two value that follow and click "Calculator"</p>
+            <label for="type">Customer Type:</label>
+            <select name="type" id="type">
+             <option value="lay">Lay</option>
+             <option value="honer">Honer</option>
+             <option value="other">Orther</option>
+         </select> <br>
+            <label for="subtotal">Invoice Subtotal:</label>
+            <input type="text" name="subtotal" id="subtotal"> <br>
+            <p>----------------------------------------------------------------------</p>
+            <label for="percent">Discount Percent:</label>
+            <input type="text" name="percent" id="percent" disabled><span>%</span> <br>
+            <label for="amount">Discount Amount</label>
+            <input type="text" name="amount" id="amount" disabled> <br>
+            <label for="total">Invoice Total:</label>
+            <input type="text" name="total" id="total" disabled> <br>
+            <input type="button" id="calculator" value="Calculator">
+        </form>
+    </main>
+</body>
+<script src="calculator.js"></script>
+
+</html>

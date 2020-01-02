@@ -10,18 +10,25 @@
 </head>
 
 <body>
-    <audio id="my_audio">	
-        <source src="nhac.mp3" type="audio/mpeg">
-    </audio>
-
+    <div>
+        <audio id="my_audio"  >	
+            <source src="nhac.mp3"   type="audio/mpeg">
+        </audio>
+    </div>
     <div class="content">
-        <h3 id="show_time"></h3>
-        <p id="show_mess"></p>
-        <form action="#">
-            <button type="button" id="turn_off">Turn off</button><br>
-            <input type="text" name="message_" id="message_" placeholder="Input your message"><br>
+        <h1 id="show_mess">Clock</h1>
+        <div id="show_time">
+            <span id="hours"></span>
+            <span id="minutes"></span>
+            <span id="seconds"></span>
+            <span id="ap"></span>
+        </div>
+
+        <form action="#" id="form">
+            <input type="text" name="mess" id="mess" placeholder="Input your message"><br>
             <input type="time" name="time" id="time"><br>
-            <button type="button" id="set_time">Set time</button>
+            <input type="button"   name="set_time" id="set_time" value="Set Time">
+            <input type="button" class="none" name="tunr_off" id="turn_off" value="Turn Off" ><br>
         </form>
     </div>
 </body>
