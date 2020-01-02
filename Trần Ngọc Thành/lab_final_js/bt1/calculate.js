@@ -22,10 +22,7 @@ $("summit").onclick = function() {
             salary = sales * 0.15;
         }
         $("sal").value = salary;
-        if (salary >= 1000) {
-            tax = 0.1;
-        }
-        else tax = 0;
+        tax = salary >= 1000 ? 0.1 : 0
         $("tax").value = tax * 100;
         total = salary - salary * tax;
         $("total").value = total.toLocaleString();
