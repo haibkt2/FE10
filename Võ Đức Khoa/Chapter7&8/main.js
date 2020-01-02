@@ -26,7 +26,7 @@ setInterval(function showTime() {
 $('set_time').onclick = function() {
     var text = $('mess').value;
     var time = $('time').value;
-    if (time.trim() == '' || time == null || text == null || text.trim() == '') alert('Error');
+    if (time.trim() == '' || time == null || text == null || text.trim() == '') alert('Please input message and alarm time ...');
     else {
         localStorage.setItem(time, text);
     $('mess').value = '';
