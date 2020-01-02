@@ -20,9 +20,6 @@ $('submit').onclick = function(){
             salary = sale*0.15        
         }
         tax = salary > 1000 ? 10 : 0;
-    }
-    else alert('Error');
-    if(check){
         $('salary').value = parseFloat(salary).toFixed(2);
         $('tax').value = tax + '%';
         var total = salary - salary*(tax/100);
