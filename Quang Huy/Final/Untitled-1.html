@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculate Employee Salaries</h1>
+    <label for="sales">Sales</label>
+    <input type="text" id="sales"><br><br>
+    <label>Salary</label>
+    <input type="text" id="salary" disabled><br><br>
+    <label>Personal Income Tax</label>
+    <input type="text" id="personal" disabled><br><br>
+    <label>Total</label>
+    <input type="text" id="total" disabled><br><br>
+    </label>
+    <button type="button" id="cal" onclick="cal()">Submit</button>
+    <button type="reset">Clear</button>
+    <script>
+        var $ = function(id){
+            return document.getElementById(id);
+        };  
+        
+        function cal(){
+            var sales = $("sales").value;        
+            var salary = $("salary").value;
+            var personal = $("personal").value;
+            var total = $("total").value;
+            if(isNaN(sales) || sales <0){
+                alert("input number");
+            } else {
+                if (sales < 5000) {
+                    salary = sales * 0.05;
+                } else if (sales <= 10000 && sales >= 5000) {
+                    salary = sales * 0.1;
+                } else {
+                    salary = sales * 0.15;
+                }
+
+                $("salary").value = salary;
+                
+                if (salary >= 1000) {
+                    personal = 0.1;
+                }
+                else {
+                    personal = 0;
+                }
+
+                $("personal").value = personal * 100 +"%";
+                total = salary - salary * personal;
+                document.getElementById("total").value=total;
+            }
+        }
+    
+
+
+    </script>
+</body>
+</html>
