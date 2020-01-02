@@ -1,20 +1,55 @@
-body {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
 .content {
-    padding: 1rem;
-    border: 1px solid black;
+    margin: auto;
+    width: 300px;
+    height: 250px;
+    text-align: center;
+    background-color: black;
+    border: 2px solid gray;
+    border-radius: 3em;
 }
-#turnOff {
-    display: none;
+
+.content>#show_mess {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+    text-transform: uppercase;
+    font-size: 1.5em;
 }
-#message {
-    background-color: blue;
-    color: white;
+
+.content>#show_time>#hours,
+#minutes,
+#seconds,
+#ap {
+    font-size: 2em;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
-button, input {
-    margin: 5px 0;
-    width: 150px;
+
+#show_time {
+    margin-bottom: 1em;
+}
+
+form>input {
+    margin: .5em;
+}
+
+form>#set_time,
+#turn_off {
+    background-color: white ;
+    color: black;
+    border-radius: .5em;
+}
+
+#mess {
+    background-color: white;
+    border-radius: .5em;
+    border: 2px solid white;
+}
+
+#time {
+    background-color: black;
+    border-radius: .5em;
+    color: red;
+}
+.none{
+    display:none;
 }
