@@ -27,3 +27,10 @@
                 document.getElementById("total").value=total;
             }
         }
+
+        $("clear").onclick = function(){
+            document.getElementById("sales").value="";
+            document.getElementById("salary").value="";
+            document.getElementById("personal").value="";
+            document.getElementById("total").value="";
+        }
