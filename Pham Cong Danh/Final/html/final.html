@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài Tập Final</title>
+    <link rel="stylesheet" href="../css/final.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>Calculate Employee Salaries</h1>
+        <form action="#" method="post">
+            <label for="sales">Sales: </label><br>
+            <input type="text" name="sales" id="sales" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency"><br>
+            <!-- <input type="text" name="sales" id="sales"><br> -->
+            <label for="salary">Salary </label><br>
+            <input type="text" name="salary" id="salary" disabled><br>
+            <label for="tax">Personal Income Tax </label><br>
+            <input type="text" name="tax" id="tax" disabled><br>
+            <label for="total">Total </label><br>
+            <input type="text" name="total" id="total" disabled><br>
+            <button type="button" id="submit">Submit</button>
+            <button type="button" id="clear">Clear</button>
+        </form>
+    </div>
+
+    <script src="../js/final.js"></script>
+</body>
+
+</html>
