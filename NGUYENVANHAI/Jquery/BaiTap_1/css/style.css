@@ -1,0 +1,17 @@
+.container{
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.accordion-item > p{
+    color: blue;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+
+.active .hidden{
+    display: block;
+}
