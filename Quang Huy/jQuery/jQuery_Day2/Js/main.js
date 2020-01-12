@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("div").hide();
+    $("div").toggle();
     $("span").toggleClass("glyphicon glyphicon-plus");
     $("h2").click(function() {
         $(this).next().toggle();
