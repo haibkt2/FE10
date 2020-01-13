@@ -1,17 +1,42 @@
 .container{
     max-width: 600px;
     margin: 40px auto;
+    font-family: "Roboto", sans-serif;
+    color: #333333;
 }
 
 .accordion-item > p{
-    color: blue;
     cursor: pointer;
 }
 
 .hidden{
     display: none;
+    transition: all .5s;
 }
 
 .active .hidden{
     display: block;
+    padding: 10px 28px;
+    font-size: 13px;
+    word-spacing: 2px;
+    line-height: 20px;
+}
+
+.active .accordion-title{
+    background-color: #0000000d;
+    margin: 0;
+    padding: 6px 10px;
+    border-top: 2px solid #3a87c8;
+    color: #3a87c8;
+    font-weight: 600;
+}
+
+.active i{
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+
+i{
+    transform: rotate(0deg);
+    transition: all .5s;
 }
