@@ -20,3 +20,6 @@ h1{
 .cl{
     color: rgb(14, 0, 53);
 }
+p, h3, li{
+    font-size: 16px;
+}
