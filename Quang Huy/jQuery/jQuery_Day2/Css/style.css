@@ -5,3 +5,7 @@ a {
 .rs{
     color: blue;
 }
+
+div{
+    display: none;
+}
