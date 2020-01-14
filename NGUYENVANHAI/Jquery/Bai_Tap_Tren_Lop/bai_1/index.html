@@ -14,6 +14,11 @@
         <p src="./img/3.jpg" alt="hinh 3"></p>
         <p src="./img/4.jpg" alt="hinh 4"></p>
         <p src="./img/5.jpg" alt="hinh 5"></p>
+        <p src="./img/6.jpg" alt="hinh 6"></p>
+        <p src="./img/7.jpg" alt="hinh 7"></p>
+        <p src="./img/8.jpg" alt="hinh 8"></p>
+        <p src="./img/9.jpg" alt="hinh 9"></p>
+        <p src="./img/10.jpg" alt="hinh 10"></p>
     </div>
     <div class="container" style="width: 50%;">
         <h1>Fishing Slide Show</h1>
@@ -35,9 +40,11 @@
             var alt = $(this).attr("alt");
             arr_obj_img.push(new obj_img(src, alt));
         });
-        var i =0;
+
+        var i = 0, a = 0;
+        
         setInterval(function(){
-            
+            i = a % arr_obj_img.length;
             $("img").attr("src", arr_obj_img[i].src);
             $("img").attr("alt", arr_obj_img[i].alt);
             $("#show_alt").text(arr_obj_img[i].alt);
@@ -45,11 +52,8 @@
             $("img").fadeIn(1000, function(){
                 $("img").fadeOut(1000);
             });
-            if(i < arr_obj_img.length-1){
-                i++;
-            }else{
-                i = 0;
-            }
+            a++;
+            console.log(i);
         },1000);
     </script>
 </body>
