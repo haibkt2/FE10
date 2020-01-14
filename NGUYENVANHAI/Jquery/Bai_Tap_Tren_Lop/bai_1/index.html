@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bai 1</title>
+</head>
+<body>
+
+    <div class="img_temp" style="display: none;">
+        <p src="./img/1.jpg" alt="hinh 1"></p>
+        <p src="./img/2.jpg" alt="hinh 2"></p>
+        <p src="./img/3.jpg" alt="hinh 3"></p>
+        <p src="./img/4.jpg" alt="hinh 4"></p>
+        <p src="./img/5.jpg" alt="hinh 5"></p>
+    </div>
+    <div class="container" style="width: 50%;">
+        <h1>Fishing Slide Show</h1>
+        <p>Catch and Release on the Big Horn</p>
+        <img src="./img/1.jpg" alt="hinh 1">
+    </div>
+
+    <script src="./jquery/jquery-3.4.1.min.js"></script>
+    <script>
+        function obj_img(src, alt){
+            var src = this.src;
+            var alt = this.alt;
+        }
+        
+        var arr_obj_img = [];
+        
+        $(".img_temp p").each(function(){
+            $(this).attr("src");
+        });
+
+        setInterval(function(){
+            var change_img = $("img");
+            change_img.attr("src", "./img/"+i+".jpg")
+
+            change_img.fadeIn(1000, function(){
+                change_img.fadeOut(1000);
+            });
+            if(i < arr.length){
+                i++;
+            }else{
+                i = 0;
+            }
+        },1000);
+    </script>
+</body>
+</html>
