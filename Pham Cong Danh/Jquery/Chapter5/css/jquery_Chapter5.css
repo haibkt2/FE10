@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+    margin-top: 50px;
+    margin-left: 30%;
+    margin-right: 30%;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .5);
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(15, 85, 112);
+}
+h1{
+    margin-left: 5px ;
+    width: fit-content;
+}
+h2{
+    margin-left: 15px ;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    width: fit-content;
+}
+div{
+    margin-left: 40px;
+}
+ul{
+    margin-left: 35px;
+}
+p{
+    margin-right: 35px;
+}
+.blue{
+    color:rgb(42, 25, 197);
+ }
