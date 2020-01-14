@@ -1,0 +1,12 @@
+div#container {
+	margin-left: 50px;
+}
+
+a.qwer {
+	text-decoration: none;
+	color :blue;
+}
+
+div.show-list{
+	display: none;
+}
