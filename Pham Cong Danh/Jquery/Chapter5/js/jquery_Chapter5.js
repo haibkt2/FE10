@@ -2,7 +2,7 @@ $(document).ready(function(){
     $("div").hide();
     $("h2").click(function(){
         $(this).next().toggle();
-        $(this).toggleClass('blue');
-        $(this).children("i").toggleClass("fa fa-minus-circle");
+        $(this).children("a").toggleClass('blue');
+        $(this).children("i").toggleClass("fa-minus-circle");
     });
 });
