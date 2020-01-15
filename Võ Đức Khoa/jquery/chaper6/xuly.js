@@ -21,9 +21,9 @@ $(document).ready(function(){
         count++;
      }
      var my_func;
-    my_func = setInterval(list_image,1000);
+    my_func = setInterval(list_image,3000);
     $("#play").click(function(){
-       my_func = setInterval(list_image,1000);
+       my_func = setInterval(list_image,3000);
     });
     $("#pause").click(function(){
         clearInterval(my_func);
