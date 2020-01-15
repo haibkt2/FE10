@@ -1,9 +1,10 @@
 $(document).ready(function(){
-    $("div").toggle();
-    $("span").toggleClass("glyphicon glyphicon-plus");
     $("h2").click(function() {
         $(this).next().toggle();
-        $(this).children("span").toggleClass("glyphicon glyphicon-minus");
+        $(this).children("i").toggleClass("glyphicon glyphicon-minus");
         $(this).children("a").toggleClass("rs");
+        $("div").not($(this).next()).hide();
+        $("a").not($(this).children()).removeClass("rs");
+        $("i").not($(this).children()).removeClass("glyphicon glyphicon-minus");
     });
 });

@@ -39,4 +39,5 @@
 i{
     transform: rotate(0deg);
     transition: all .5s;
+    padding-left: 10px;
 }
