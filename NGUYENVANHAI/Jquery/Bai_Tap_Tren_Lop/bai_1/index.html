@@ -28,17 +28,17 @@
 
     <script src="./jquery/jquery-3.4.1.min.js"></script>
     <script>
-        function obj_img(src, alt){
-            this.src = src;
-            this.alt = alt;
-        }
         
         var arr_obj_img = [];
-        
+        var obj_img;
+        var src,alt; 
         $(".img_temp p").each(function(){
-            var src = $(this).attr("src");
-            var alt = $(this).attr("alt");
-            arr_obj_img.push(new obj_img(src, alt));
+            src = $(this).attr("src");
+            alt = $(this).attr("alt");
+            obj_img = new Image();
+            obj_img.src =src;
+            obj_img.alt = alt;
+            arr_obj_img.push(obj_img);
         });
 
         var i = 0, a = 0;
@@ -53,7 +53,6 @@
                 $("img").fadeOut(1000);
             });
             a++;
-            console.log(i);
         },1000);
     </script>
 </body>
