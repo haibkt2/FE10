@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        sessionStorage.clear();
+        var arr = [1,2,1,1,1,2,3], v = 0, value, k = 0; arrNew = [];
+        var temp = 0;
+        for(let i = 0; i < arr.length; i++){
+            value = sessionStorage.getItem(arr[i]);
+            
+            if( value == null){
+                arrNew[k++] = arr[i];
+                v = 1;  
+            }else{
+                v = parseInt(value) + 1;
+            }
+            sessionStorage.setItem(arr[i],v);
+        }
+
+        var count = 0;
+        for(let i = 0; i < arrNew.length; i++){
+            value = sessionStorage.getItem(arrNew[i]);
+            count += parseInt(parseInt(value/2).toFixed(0));
+        }
+
+        console.log(count);
+
+    </script>
+</body>
+</html>

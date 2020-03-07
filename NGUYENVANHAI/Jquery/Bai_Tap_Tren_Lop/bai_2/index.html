@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài Tập 1</title>
+    <style>
+        #container{
+            width: 500px;
+            height: 500px;
+            position: relative;
+            top: 20px;
+            bottom: 800px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <button id="play">Play</button>
+        <button id="stop">Stop</button>
+        <button id="stop_all">Stop All</button>
+        <button id="stop_jum">Stop Jum</button>
+    </div>
+
+    <img id="container" src="./hehe.png" alt="">
+
+    <div id="container">
+        
+    </div>
+
+    <script src="./jquery/jquery-3.4.1.min.js"></script>
+    <Script>
+       
+        $("#play").click(function(){
+            $("#container").animate(
+            {left:"20%"},2000,
+            function(){
+                for(let i = 0; i < 100000; i++){
+                    $("#container").css("transform","rotate("+i+"deg)");
+                    $("#container").css("transition","20s all");
+                }
+            }
+            );
+
+            $("#container").delay(10000).fadeOut(1000);
+        });
+
+        // $("#play").click(function(){
+        //     $("#container").animate({width: "+=200px"},2000);
+        //     $("#container").animate({height: "+=200px"},2000);
+        // });
+
+        $("#stop").click(function(){
+            $("#container").stop(true);
+        });
+        
+        // $("#stop_all").click(function(){
+        //     $("#container").stop(true);
+        // });
+
+        // $("#stop_jum").click(function(){
+        //     $("#container").stop(true, true).animate({height: "+=200px"},0);
+        // });
+        
+        // //     console.log(roundToTwo(1234.5678));
+        
+        // // function roundToTwo(num) {    
+        // //     return +(Math.round(num + "e+2")  + "e-2");
+        // // }
+
+        // // toS
+        
+    </Script>
+</body>
+</html>
