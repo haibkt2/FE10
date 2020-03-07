@@ -29,7 +29,7 @@ var user = function(name, mail,  pass,
 $("#form_sign").validate({
 	rules : {
 		pass : {
-			require : true,
+			required : true,
 			minlength : 8
 		},
 		re_pass : {
@@ -52,7 +52,7 @@ $("#form_sign").validate({
 
 $("#sign_up").click(function(){
 	if($("#form_sign").valid()) {
-		
+
 	}
 });
 
