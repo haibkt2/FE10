@@ -15,16 +15,6 @@ $("#country").change(function(){
 	}
 });
 
-var user = function(name, mail,  pass,
- 					 bith,  phone,  country, address){
-	this.name = name;
-	this.mail = mail;
-	this.pass = pass;
-	this.bith = bith;
-	this.phone = phone;
-	this.country = country;
-	this.address = address;
-}
 // validate
 $("#form_sign").validate({
 	rules : {
@@ -46,13 +36,58 @@ $("#form_sign").validate({
 		}
 	}
 })
-
-
-
-
+var user = function(name, mail,  pass,
+ 					 bith,  phone,  country, address){
+	this.name = name;
+	this.mail = mail;
+	this.pass = pass;
+	this.bith = bith;
+	this.phone = phone;
+	this.country = country;
+	this.address = address;
+}
 $("#sign_up").click(function(){
 	if($("#form_sign").valid()) {
-
+		// get info user
+		var name = $("#name").val(),
+		 pass = $("#pass").val(),
+		 mail = $("#mail").val(),
+		 bith = $("#bithday").val(),
+		 phone  = $("#phone").val(),
+		 country  = $("#country").val(),
+		 address  = $("#address").val();
+		// create obj user
+		var user = new user(name, mail,  pass,
+ 					 bith,  phone,  country, address);
+		// register user
+		// convert object to json
+		var json = JSON.stringify(user);
+		// save local
+		localStorage.setItem(name, json);
+	}
+});
+$("#login").click(function(){
+	// validate
+	if($("#form_login").valid()) {
+		// Get value input
+		var name = $("#name").val(),
+		 pass = $("#pass").val();
+		// Get data user, check login of user
+		var user_json = localStorage.getItem(name);
+		if(user_json == null) {
+			alert("user or pass is wrong");
+		} else {
+			// check pass
+			// convert json to object
+			var user = JSON.parse(user_json);
+			var pass_infon = user.pass;
+			if(pass == pass_infon) {
+				alert("OK")
+			} else {
+				alert("user or pass is wrong");
+			}
+		}
+		
 	}
 });
 
