@@ -18,17 +18,58 @@ $("#country").change(function(){
 // validate
 $("#form_sign").validate({
 	rules : {
+		address : {
+           required : true
+		},
+		phone : {
+		   required : true
+		},
+		bithday : {
+		   required : true,
+		   date : true
+		},
+		email : {
+		   required : true,
+		   email : true
+		   
+		},
+		name : {
+            required : true
+		},
 		pass : {
 			required : true,
-			minlength : 8
+			minlength : 6
 		},
 		re_pass : {
 			equalTo : "#pass"
+		},
+		country : {
+			required : true
 		}
 	}, 
 	messages : {
+		address : {
+            required : " chon dia chi"
+		},
+		country : {
+			required : "hay chon quoc gia"
+		},
+		phone : {
+         required : "hay nhap so phone"
+		},
+		bithday : {
+		  required: "nhap di",
+		  date : "nhap dung theo mau"
+		},
+		email : {
+		  required : "Enter email",
+		  email : "nhap theo dung kieu email"
+		},
+		name : {
+           required : "enter name"
+		},
 		pass : {
-			require : "input pass",
+			required : "input pass",
 			minlength : jQuery.validator.format("Min is {0}")
 		},
 		re_pass : {
@@ -57,11 +98,11 @@ $("#sign_up").click(function(){
 		 country  = $("#country").val(),
 		 address  = $("#address").val();
 		// create obj user
-		var user = new user(name, mail,  pass,
+		var user1 = new user(name, mail,  pass,
  					 bith,  phone,  country, address);
 		// register user
 		// convert object to json
-		var json = JSON.stringify(user);
+		var json = JSON.stringify(user1);
 		// save local
 		localStorage.setItem(name, json);
 	}
@@ -71,7 +112,7 @@ $("#login").click(function(){
 	if($("#form_login").valid()) {
 		// Get value input
 		var name = $("#name").val(),
-		 pass = $("#pass").val();
+	 pass = $("#pass").val();
 		// Get data user, check login of user
 		var user_json = localStorage.getItem(name);
 		if(user_json == null) {
