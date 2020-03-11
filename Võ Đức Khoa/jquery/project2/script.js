@@ -1,21 +1,4 @@
-var json = "[{\"id\":0,\"address\":[\"ĐN\",\"QB\"]},{\"id\":1,\"address\":[\"JP1\",\"JP2\"]}]";
-var obj = JSON.parse(json);
-$("#country").change(function(){
-	$("#address").empty();
-	var v_op = $("#country").val(); // empty, 0 or 1
-	if(v_op != "") {
-		let arr_adress = obj[v_op].address;
-		// Loop arr, create option
-		var option = "";
-		for(let i = 0; i < arr_adress.length ; i++) {
-			option = "<option value=\"" + i +"\">" + arr_adress[i] + "</option>";
-			$("#address").append(option);
-		}
-		
-	}
-});
-
-// validate
+ // validate
 $("#form_sign").validate({
 	rules : {
 		address : {
@@ -77,58 +60,67 @@ $("#form_sign").validate({
 		}
 	}
 })
-var user = function(name, mail,  pass,
- 					 bith,  phone,  country, address){
-	this.name = name;
-	this.mail = mail;
-	this.pass = pass;
-	this.bith = bith;
-	this.phone = phone;
-	this.country = country;
-	this.address = address;
-}
-$("#sign_up").click(function(){
-	if($("#form_sign").valid()) {
-		// get info user
-		var name = $("#name").val(),
-		 pass = $("#pass").val(),
-		 mail = $("#mail").val(),
-		 bith = $("#bithday").val(),
-		 phone  = $("#phone").val(),
-		 country  = $("#country").val(),
-		 address  = $("#address").val();
-		// create obj user
-		var user1 = new user(name, mail,  pass,
- 					 bith,  phone,  country, address);
-		// register user
-		// convert object to json
-		var json = JSON.stringify(user1);
-		// save local
-		localStorage.setItem(name, json);
+var json = `[
+	{
+		"id" : 0,
+		"address" : ["HN" , "DN"]
+	},
+	{
+		"id" : 1,
+		"address" : ["Vu Han" , "Ho Bac"]
 	}
-});
-$("#login").click(function(){
-	// validate
-	if($("#form_login").valid()) {
-		// Get value input
-		var name = $("#name").val(),
-	 pass = $("#pass").val();
-		// Get data user, check login of user
-		var user_json = localStorage.getItem(name);
-		if(user_json == null) {
-			alert("user or pass is wrong");
-		} else {
-			// check pass
-			// convert json to object
-			var user = JSON.parse(user_json);
-			var pass_infon = user.pass;
-			if(pass == pass_infon) {
-				alert("OK")
-			} else {
-				alert("user or pass is wrong");
-			}
-		}
-		
+]`
+var obj_json = JSON.parse(json);
+$("#country").change(function(){
+	$("#address").empty();
+	var country = $("#country").val();	
+	if(country != ""){
+		let arr_address = obj_json[country].address;
+	    var option ="";
+		for(let i = 0; i < arr_address.length; i++){
+		option = "<option value = '" + i + "'>" + arr_address[i] + "</option>";
+		$("#address").append(option);
+	   }
 	}
 });
 
+// xu ly login
+// tao constructor
+var user = function(name, mail, pass, bith, phone, country, address){
+	   this.name = name;
+	   this.mail = mail;
+	   this.pass = pass;
+	   this.bith = bith;
+	   this.phone = phone;
+	   this.country = country;
+	   this.address = address;
+
+}
+$("#sign_up").click(function(){
+	if($("#form_sign").valid()){
+		var name = $("#name").val(), 
+		mail = $("#email").val(), 
+		pass = $("#pass").val(),
+		bith = $("#bithday").val(), 
+		phone = $("#phone").val(), 
+		country = $("#country").val(),
+		address = $("#address").val();
+		var user_if4 = new user(name,mail,pass,bith,phone,country,address);
+		var user_json = JSON.stringify(user_if4);
+		localStorage.setItem(name, user_json);
+	}
+});
+$("#login").click(function(){
+	var name = $("#name_login").val();
+	var pass = $("#pass_login").val();
+	var key = localStorage.getItem(name);
+	if( key == null){
+		alert("sai mk hoac tai khoan");
+	}
+	else{
+		var json_user = JSON.parse(key);
+		var obj_pass = json_user.pass;
+		if( pass == obj_pass) alert("Success!!");
+		else alert("Password or user wrong");
+	}
+});
