@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div#content{
+    width:760px;
+}
+div > img{
+    width: 250px;
+    height: 250px;
+}
+div > .car{
+    display: inline-block;
+}
+div#bill{
+    float: right;
+    width: 300px;
+    
+}
