@@ -4,7 +4,7 @@ var cars = [
       imageUrl : './img/lexus.jpg',
       imageAlt : 'Lexus',
       inputId : 'lexus',
-      price : 2222,
+      price : 1,
       nameCar : 'Lexus'
     },
     {
@@ -12,7 +12,7 @@ var cars = [
       imageUrl : './img/bim.jpg',
       imageAlt : 'BWM',
       inputId : 'bim',
-      price : 1111,
+      price : 1,
       nameCar : 'BWM i8'
     },
     {
@@ -20,7 +20,7 @@ var cars = [
       imageUrl : './img/audi.jpg',
       imageAlt : 'Audi',
       inputId : 'audi',
-      price : 3333,
+      price : 1,
       nameCar : 'Audi'
     },
     {
@@ -28,7 +28,7 @@ var cars = [
       imageUrl : './img/lambo.jpg',
       imageAlt : 'Lambo',
       inputId : 'lambo',
-      price : 5555,
+      price : 1,
       nameCar : 'Lamborghini'
     },
     {
@@ -36,7 +36,7 @@ var cars = [
       imageUrl : './img/vinfast.jpg',
       imageAlt : 'vinfast',
       inputId : 'vinfast',
-      price : 9999,
+      price : 1,
       nameCar : 'VinFast'
     },
     {
@@ -44,7 +44,7 @@ var cars = [
       imageUrl : './img/mercedes.jpg',
       imageAlt : 'Mercedes',
       inputId : 'mercedes',
-      price : 8888,
+      price : 1,
       nameCar : 'Mescedes'
     }
 ]
