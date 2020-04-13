@@ -18,18 +18,19 @@ loadItems();
 
 // content bill
 var filterBills = [];
-const bills = cars.map(item => {
+var bills = cars.map(item => {
    return {
        nameCar : item.nameCar,
        price : item.price,
        quantity : 0
    }
 })
+console.log(bills)
 $('#content i').click(function(){
     var tag_i = $(this);
     var value = parseInt(tag_i.siblings('input').val());
     var name = tag_i.siblings('.name').html(); // thuc hien dieu kien update arr bill
-    if(value > 0)
+    if(value > 0 )
     {
         bills.forEach( item => {
             if(item.nameCar === name){
@@ -43,6 +44,9 @@ $('#content i').click(function(){
         //loc nhung object de hien thi tren bill
         filterBills = bills.filter( item => item.quantity !== 0)
         loadBills(); 
+        $(this).siblings('input').val("");
+     //   console.log(filterBills)
+   
     }
     else alert("nhap du lieu > 0")
 })
