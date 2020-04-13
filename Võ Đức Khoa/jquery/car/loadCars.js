@@ -29,14 +29,18 @@ $('#content i').click(function(){
     var tag_i = $(this);
     var value = parseInt(tag_i.siblings('input').val());
     var name = tag_i.siblings('.name').html(); // thuc hien dieu kien update arr bill
-    bills.forEach( item => {
-        if(item.nameCar === name){
-           item.quantity = item.quantity + value;
-        }
-    })
-    //loc nhung object de hien thi tren bill
-    filterBills = bills.filter( item => item.quantity !== 0)
-    if(value > 0) loadBills(); 
+    if(value > 0)
+    {
+        bills.forEach( item => {
+            if(item.nameCar === name){
+               item.quantity = item.quantity + value;
+            }
+        })
+        //loc nhung object de hien thi tren bill
+        filterBills = bills.filter( item => item.quantity !== 0)
+        loadBills(); 
+    }
+    else alert("nhap du lieu > 0")
 })
 $('tbody').on('click','i',function(){
         var tag_ = $(this);
