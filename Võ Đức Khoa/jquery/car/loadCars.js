@@ -36,6 +36,10 @@ $('#content i').click(function(){
                item.quantity = item.quantity + value;
             }
         })
+        tag_i.addClass('aminate');
+        setTimeout(function(){
+            $('#content i').removeClass('aminate')
+        },100)
         //loc nhung object de hien thi tren bill
         filterBills = bills.filter( item => item.quantity !== 0)
         loadBills(); 
