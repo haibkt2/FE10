@@ -95,7 +95,7 @@ $("#login").click(function(){
         }
     }
     else
-	   if( key == null) alert("tai khoan nay chua duoc tao hay dang register account");
+	   if( key == null || key == "[]") alert("tai khoan nay chua duoc tao hay dang register account");
        else{
         var usered = JSON.parse(key);
         usered.forEach(item =>{
