@@ -105,7 +105,5 @@ $("#login").click(function(){
              }
          else alert('sai password');
         })              
-     }		
-        
-          
+     }		        
 });

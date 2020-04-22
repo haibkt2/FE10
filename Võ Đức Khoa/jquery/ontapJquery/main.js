@@ -6,6 +6,11 @@ function getUser(){
 }
 getUser();
 showUser();
+//common func save on localStrorage
+function save(){
+    var usered = JSON.stringify(users);
+    localStorage.setItem("usered",usered);
+}
 // chuc nang cua button add
 $(".add").click(function(){
     if( $("#code").val().trim() != "" ){
@@ -28,10 +33,10 @@ $(".add").click(function(){
    //truyen vao array
    users.push(user);
    //reset form input
-  $("#form").trigger("reset");   
+   $("#form").trigger("reset");   
    showUser();
-   alert("save de luu data");
-    }
+   save();
+}
     else alert('bat buoc nhap code');  
    
 })
@@ -82,13 +87,17 @@ $(".delete").click(function(){
         users = [...filter];
         showUser();
         check = false;
-        alert("save de luu data");
+        save();
     }
    else alert("hay chon user")
 })  
 //chuc nang edit
-$(".edit").click(function(){
+$(".edit").click(function(){   
    if(check == true){
+    if($(this).is(".edit")){
+        var btnSave = $(this).next();
+        btnSave.css({"pointer-events":"all","border" : "2px","background-color":"orange"});
+    }
     users.forEach(item => {
         if(item.code == temp){
             $("#name").val(`${item.name}`)
@@ -106,7 +115,9 @@ $(".edit").click(function(){
 })
 // chuc nang luu cua button save
 $(".save").click(function(){
- //  if( $("#code").val().trim() != ""){
+        $(this).css({"pointer-events": "none",
+           "background-color" : "aliceblue",
+            "border": "none"})
         users.forEach(item => {
             if(item.code == temp){
                 item.code = $("#code").val();
@@ -123,8 +134,7 @@ $(".save").click(function(){
        var listUser = JSON.stringify(users);
        localStorage.setItem("usered",listUser);
        console.log(users);
-//}
- //  else alert("Hay edit truoc roi save");
+
    })
 
 //chuc nang exit save current
