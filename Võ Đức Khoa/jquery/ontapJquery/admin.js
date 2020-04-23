@@ -3,60 +3,43 @@ function setAdmin(){
     localStorage.setItem("admin","admin")
 }
 setAdmin();
- // validate
-//  $("#form_sign").validate({
-// 	rules : {
-// 	    code :{
-//             required : true
-//         },
-//         username :{
-//             required : true
-//         },
-// 		email : {
-// 		   required : true,
-// 		   email : true
-		   
-// 		},
-// 		name : {
-//             required : true
-// 		},
-// 		pass : {
-// 			required : true,
-// 			minlength : 6
-// 		},
-// 		re_pass : {
-// 			equalTo : "#pass"
-//         },
-//         address :{
-//             required: true
-//         }	
-// 	}, 
-// 	messages : {
-//         code :{
-//           required: "Enter code"
-//         },
-//         username :{
-//             required : "Enter username"
-//         },
-// 		email : {
-// 		  required : "Enter email",
-// 		  email : "nhap theo dung kieu email"
-// 		},
-// 		name : {
-//            required : "enter name"
-// 		},
-// 		pass : {
-// 			required : "input pass",
-// 			minlength : jQuery.validator.format("Min is {0}")
-// 		},
-// 		re_pass : {
-// 			equalTo : "Not same"
-//         },
-//         address :{
-//             required : "Enter address"
-//         }
-// 	}
-// })
+$("form").validate({
+        rules : {
+            code :"required",
+            name :"required",
+            email : {
+                required : true,
+                email:true
+            },
+            username : "required",
+            pass : {
+                required : true,
+                minlength : 5
+            },
+            re_pass : {
+                equalTo : "#pass"
+            },
+            address :"required"
+        },
+    messages : {
+            code : "please enter",
+            name :"please enter",
+            email : {
+                required : "please enter",
+                email:"must standard email"
+            },
+            username : "please enter",
+            pass : {
+                required :"please enter",
+                minlength : "least 5 syntax"
+            },
+            re_pass : {
+                equalTo : "must comfirm correct"
+            },
+            address :"please enter"
+        }
+}); 
+
 // xu ly login
 // tao constructor
 var user = function(name,address,password,code,email,username){
@@ -106,4 +89,38 @@ $("#login").click(function(){
          else alert('sai password');
         })              
      }		        
+});
+//chuc nang tu dong focus cho cac input
+$("#username").focus(function() {
+    var name = $("#name").val();
+    if (name && !this.value) {
+        this.value = name + ".123";
+    }
+});
+$("#code").focus(function() {
+    var name = $("#name").val();
+    if (name && !this.value) {
+        this.value = name + "_123";
+    }
+});
+$("#email").focus(function() {
+    var name = $("#name").val();
+    if (name && !this.value) {
+        this.value = name + "@gmail.com";
+    }
+});
+$("#address").focus(function() {
+        this.value = "VietNam";
+});
+$("#pass").focus(function() {
+    var name = $("#name").val();
+    if (name && !this.value) {
+        this.value = name + "123";
+    }
+});
+$("#re_pass").focus(function() {
+    var name = $("#name").val();
+    if (name && !this.value) {
+        this.value = name + "123";
+    }
 });

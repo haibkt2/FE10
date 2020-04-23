@@ -141,4 +141,31 @@ $(".save").click(function(){
 $(".exit").click(function(){
     $("#form").trigger("reset");  
 })
-
+//chuc nang focus cho cac input
+$("#username").focus(function() {
+    var name = $("#name").val();
+    if (name && !this.value) {
+        this.value = name + ".123";
+    }
+});
+$("#code").focus(function() {
+    var name = $("#name").val();
+    if (name && !this.value) {
+        this.value = name + "_123";
+    }
+});
+$("#email").focus(function() {
+    var name = $("#name").val();
+    if (name && !this.value) {
+        this.value = name + "@gmail.com";
+    }
+});
+$("#address").focus(function() {
+        this.value = "VietNam";
+});
+$("#password").focus(function() {
+    var name = $("#name").val();
+    if (name && !this.value) {
+        this.value = name + "123";
+    }
+});
