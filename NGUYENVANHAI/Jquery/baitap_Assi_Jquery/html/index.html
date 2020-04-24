@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<div class="hero">
+		<div class="from-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" id="login_page">Log In</button>
+				<button type="button" class="toggle-btn" id="register_page">Register</button>
+			</div>
+			<div class="social-icons">
+				<img src="../imgs/fb.png">
+				<img src="../imgs/tw.png">
+				<img src="../imgs/gp.png">
+			</div>
+			<form action="#" method="GET" id="login_form" class="input-group" novalidate="novalidate">
+				<input id="username" name="username" type="text" class="input-field" placeholder="User name">
+				<input id="password" name="password" type="password" class="input-field" placeholder="Enter Password">
+				<input type="checkbox" class="check-box"><span>Remember Password</span>
+				<button type="button" id="login" class="submit-btn">Log in</button>
+			</form>
+			<form id="register_form" class="input-group">
+				<input id="register_username" name="register_username" type="text" class="input-field" placeholder="User name">
+				<input id="register_password" name="register_password" type="password" class="input-field" placeholder="Enter Password">
+				<input id="repeat_password" name="repeat_password" type="password" class="input-field" placeholder="Enter Password">
+				<input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+				 <input type="button" id="register" class="submit-btn" value="Register">
+			</form>
+		</div>
+	</div>
+
+	<script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

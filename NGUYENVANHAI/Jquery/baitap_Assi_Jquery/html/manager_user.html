@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manage User</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body>
+    <div class="container block_manager">
+        <div class="row">
+        	<div class="img-logo">
+				<img src="../imgs/logo.png" alt="logo">
+			</div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1>User Manager</h1>
+            </div>
+            <form action="#" method="GET" id="form_manager" novalidate="novalidate">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <fieldset>
+                        <label>Name:</label>
+                        <input id="yourname" name="yourname" class="form-control" type="text" placeholder="Jane Doe" autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <label>Address:</label>
+                        <input id="address" name="address" class="form-control" type="text">
+                    </fieldset>
+                    <fieldset>
+                        <label>Password:</label>
+                        <input id="password" name="password" class="form-control" type="text">
+                    </fieldset>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <fieldset>
+                        <label>Code:</label>
+                        <input id="code" name="code" class="form-control" type="number">
+                    </fieldset>
+                    <fieldset>
+                        <label>Email:</label>
+                        <input id="email" name="email" class="form-control" type="text" placeholder="jane.doe@example.com">
+                    </fieldset>
+                    <fieldset>
+                        <label>User Name:</label>
+                        <input id="username" name="username" class="form-control" type="text"">
+					</fieldset>
+				</div>
+				<div class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 col-button">
+                        <input type="button" class="btn btn-primary" id="add" value="Add">
+                        <input type="button" class="btn btn-success" id="Delete" value="Delete">
+                        <input type="button" class="btn btn-danger" id="Edit" value="Edit">
+                        <input type="button" class="btn btn-warning" id="Save" value="Save">
+                        <input type="button" class="btn btn-info" id="Exit" value="Exit">
+                </div>
+            </form>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <table id="user_table" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Code</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Username</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_body">
+                        <!-- <tr>
+                            <th scope="row">
+                            	<input type="radio" name="userradio" value="1" checked>
+                            </th>
+                            <td>001</td>
+                            <td>Nguye Van Hai</td>
+                            <td>Quang Nam</td>
+                            <td>zzvanhai81@gamil.com</td>
+                            <td>Van Hai</td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
