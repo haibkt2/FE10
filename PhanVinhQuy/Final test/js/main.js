@@ -106,9 +106,10 @@ $(document).ready(function () {
 
     // function delete user
     var deleteUser = function () {
-        if (checkedID) {
-            users.splice(checkedID, 1)
+        if (checkedID || checkedID == 0) {
+            users = users.filter(user => user.id !== checkedID)
             render();
+            checkedID = undefined;
         }
         else alert("please check user first")
     }
@@ -136,7 +137,10 @@ $(document).ready(function () {
             var email = $("#email").val();
             var userName = $("#userName").val();
             var password = $("#password").val();
-            users[checkedID] = { name, code, address, email, userName, password, id: checkedID};
+            users = users.map(user => {
+                if (checkedID === user.id) return { name, code, password, address, email, userName, password, id: checkedID }
+                else return { ...user }
+            })
             render();
             $("#name").val("");
             $("#code").val("");
@@ -144,6 +148,7 @@ $(document).ready(function () {
             $("#email").val("");
             $("#userName").val("");
             $("#password").val("");
+            checkedID = undefined
         }
     }
     $("#save").click(saveUser)
