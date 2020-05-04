@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <title>Document</title>
+</head>
+<body> 
+    <header >
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Destinations</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">OurStore</a>
+            </li>
+            <li class="nav-item index">
+                <a class="nav-link text-white" href="login.html">Login</a>
+            </li>
+        </ul>
+    </header>    
+      <main class="tab">  
+          <div class="form-box">
+              <div class="button-box left">
+                   <!-- <div class="btn-login ">Login</div>
+                   <div class="btn-register">Register</div>  -->
+                   <div class="btn-click one">Login</div>
+                   <div class="btn-click two">Register</div> 
+              </div>
+              <form class="login" action="#">
+                   <div class="item-input top">
+                       <h5>Email</h5>
+                       <input class="focus" type="email" id="email" name="email">
+                   </div>
+                   <div class="item-input">
+                    <h5>Password</h5>
+                    <input type="password" class="focus" id="pass" name="pass">
+                   </div>
+                   <div class="item-checkbox">
+                    <a href="#">Forgot password?</a>
+                   </div>          
+                   <button  type = "submit" class="btn" id="login">Login</button>
+                   <div class="faq">
+                    <h5>Read The Program Rules | FAQ</h5>
+                </div>
+                </form>
+              <form class ="register" action="#">
+                <div class="item-input top">
+                    <h5>Email</h5>
+                    <input type="email" class="focus" id="e" name="e">
+                    <label id="username-error" class="error" for="e"></label>
+                </div>
+                <div class="item-input">
+                    <h5>Confirm Email </h5>
+                    <input type="email" class="focus" id="re_e" name="re_e">
+                    <label id="username-error" class="error" for="re_e"></label>
+                </div>
+                <div class="item-input">
+                 <h5 >Password</h5>
+                 <input type="password" class="focus" id="password" name="password">
+                 <label id="password-error" class="error" for="password"></label>
+                </div> 
+                <div class="item-input">
+                    <h5 >Re-Password</h5>
+                    <input type="password" class="focus" id="re_password" name="re_password">                      
+                </div>          
+                <button class="btn one" id="register" >Sign up</button>
+            
+           </form>
+          </div>
+      </main>
+      <footer class=" container " style="height:100px">
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="logo-twitter"></ion-icon>
+        <p >&copy; hello</p>
+    </footer>   
+</body>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+<script src="../js/main.js"></script>
+</html>

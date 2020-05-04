@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+h3{
+    display: inline;
+}
+/* css index */
+header{
+    margin: 10px 3.8rem 10px auto;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+#faq{
+    width: 100%;
+    height: 40px;
+    color: orangered;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 0;
+}
+.carousel-item img{
+    height: 400px;
+}
+ .accordion-item{
+     position: relative;
+    border: 1px solid orangered;
+    margin: 5px 0;
+    width: 900px;
+    border-radius: 5px;  
+}
+
+.accordion-item-header{
+    margin: 5px 0; 
+    position: relative; 
+    cursor: pointer;
+    color: orangered;
+}
+.accordion-item-header h5,p{
+    margin-left: 15px;
+}
+.index{
+    background-color: orangered;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+}
+.nav a{
+    color: orangered;
+}
+.nav a.text-white{
+    text-transform: uppercase;
+} 
+ion-icon.one{
+    position: absolute;
+    top :0;
+    left: 12%;
+}
+
+ion-icon.active{
+    transform: rotate(540deg);
+}
+.accordion-item-body{
+    display: none;
+}
+/* .accordion-item-header::after{
+    content: '\002B';
+    position: absolute;
+    right: 0;
+    padding-left: .5rem;
+}
+.accordion-item-header.active::after{
+    transform: rotate(-45deg);
+    top: 25%;
+}
+.accordion-item-body{
+    display: none;
+}
+.accordion-item-header.active + .accordion-item-body{
+    display: block;
+}  */
+footer{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: orangered;
+}
+footer p{
+    margin-top: 5px;
+    padding-top:10px;
+}
+ion-icon{
+    margin: 5px;
+    
+}
+ion-icon.one{
+    position: absolute;
+    top : -25%;
+    left: 9%;
+}
+/* css form */
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    margin: 0px auto;
+    overflow: hidden;
+}
+.button-box{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    height: 45px;   
+}
+.button-box::after,.button-box::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 5px;
+    border-radius: 5px;
+    background-color:orangered;
+    top: 10%;
+}
+.button-box.right::before{
+    left: 50%;
+    width: 50%;
+}
+.button-box.left::after{
+    left: 0;
+    width: 50%;
+}
+.btn-login{
+    pointer-events:none;
+}
+.btn-click{
+    text-align: center;
+    font-weight: bold;
+    color:orangered;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.btn-click.one{
+    pointer-events: none;
+}
+form{
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    left: 20%;
+}
+.item-input{
+    position: relative;
+   width: 100%;
+   height: 35px;
+   margin: 15px 0;
+}
+.item-input.top{
+    margin-top: 50px; 
+}
+.item-checkbox{
+    margin-top: 20px;
+   
+}
+.item-checkbox > a{
+    color: orangered;
+}
+.item-input > input{
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    border:1px solid orangered;
+    border-radius: 25px;
+    outline: none;
+    background: none;
+    top:30%;
+    left:0;
+}
+.item-input > h5{
+    position: absolute;
+    color:orangered;
+    left: 5%;
+    top: 50%;
+    transition: .5s;  
+}
+#event{
+    position:absolute;
+    color: #555;
+    font-size: 11px;
+    top:-10%;
+    transition: .5s;
+}
+button.btn{
+    position: absolute;
+    font-family: 'Poppins',sans-serif;
+    width: 40%;
+    height: 30px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: orangered;
+    right: 0;
+    top: 50%;
+}
+.faq{
+   color: orangered;
+   margin-top: 30px;
+   text-align: center;
+}
+.btn.one{
+    right: 0;
+    top: 85%;
+}
+h5,a{
+    font-size: 13px;
+    font-weight: bold;
+}
+.login{
+    left: 20%;
+    transition: 1s;
+}
+.register{
+    left: 450px;
+    transition: 1s;
+}
+.register.active1{
+    left: 20%;
+    transition: 1s;
+   
+}
+.login.active2{
+    left: -250px;
+    transition: 1s;
+   
+}
+.error{
+    position: absolute;
+    left: 5%;
+    top: 125%;
+    color: rgb(29, 5, 236);
+    font-size: 12px;
+}
+div#show{
+    width: 200px;
+    outline: none;
+    background-image: linear-gradient(to right,orangered,red,orangered);
+    background-size:200%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px auto;
+    cursor: pointer;
+    transition: .3s;
+}
+div#show:hover{
+    background-position: right;
+}
+div#show > h5{
+    padding-top:7px;
+}
+
+
+
+
+
+
+
